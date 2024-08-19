@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(43, 19, 121);
+}
+
+.navbar-left, .navbar-right {
+    flex: 1;
+}
+
+.navbar-center {
+    flex: 2;
+    text-align: center;
+}
+
+.logo {
+    height: 70px;
+    float: right;
+}
+.logo1 {
+    height: 70px;
+    float: left;
+}
+.logo2{
+height: 20px;
+padding-left: 5px;
+}
+.navbar-text {
+    font-size: 24px;
+}
+
+.box{
+    background-color:  rgb(43, 19, 121);
+    color:#ffffff;
+    font-size: 30px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.aadhaar-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.aadhaar-form h2 {
+    text-align: center;
+    color: #d32f2f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+td {
+    vertical-align: top;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+.submit-btn,
+.cancel-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+}
+
+.submit-btn:hover {
+    background-color: #1e6221c3;
+}
+
+.cancel-btn:hover {
+    background-color: #d8100dd5;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Enrolment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            const fullName = document.forms["aadhaar-form"]["full-name"].value;
+            const email = document.forms["aadhaar-form"]["email"].value;
+            const mobile = document.forms["aadhaar-form"]["mobile"].value;
+        
+            if (fullName === "") {
+                alert("Full Name must be filled out");
+                return false;
+            }
+        
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+        
+            if (mobile === "") {
+                alert("Mobile number must be filled out");
+                return false;
+            }
+        
+            return true;
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="https://myaadhaar.uidai.gov.in/static/media/uidai_english_logo.37b7e790fc0b23da21bc9df098a66467.svg" alt="Left Logo" class="logo1">
+        </div>
+        <div class="navbar-center">
+            <span class="navbar-text">Unique Identification Authority of India</span>
+        </div>
+        <div class="navbar-right">
+            <img src="https://myaadhaar.uidai.gov.in/static/media/aadhaar_english_logo.9a2d63795a7f7bdd7acb2148585336be.svg" alt="Right Logo" class="logo">
+        </div>
+    </nav>
+    <div class="box">
+        <img src="https://myaadhaar.uidai.gov.in/static/media/dashboard.21335c2c89af71912adf700d228cbecd.svg" alt="Left Logo" class="logo2">
+        <span class="navbar-text">myAadhaar</span>
+    </div>
+
+    <form class="aadhaar-form" onsubmit="return validateForm()">
+        <h2>Aadhaar Enrolment and Update Form</h2>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <label>Resident <input type="radio" name="resident" value="resident"></label>
+                    <label>Non-Resident Indian (NRI) <input type="radio" name="resident" value="nri"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>Pre Enrolment ID (If applicable):</td>
+                <td><input type="text" name="pre-enrolment-id"></td>
+            </tr>
+            <tr>
+                <td>In case of Update provide Aadhaar Number (UID):</td>
+                <td><input type="text" name="aadhaar-number"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label><input type="checkbox" name="update" value="biometric"> Biometric Update (Photo + Fingerprint + Iris)</label>
+                    <label><input type="checkbox" name="update" value="mobile"> Mobile</label>
+                    <label><input type="checkbox" name="update" value="dob"> Date of Birth</label>
+                    <label><input type="checkbox" name="update" value="address"> Address</label>
+                    <label><input type="checkbox" name="update" value="name"> Name</label>
+                    <label><input type="checkbox" name="update" value="gender"> Gender</label>
+                    <label><input type="checkbox" name="update" value="email"> Email</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="full-name"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="transgender"> Transgender</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td>
+                    <input type="text" name="age" placeholder="Yrs"> OR Date of Birth: <input type="date" name="dob">
+                    <label><input type="checkbox" name="dob-status" value="declared"> Declared</label>
+                    <label><input type="checkbox" name="dob-status" value="verified"> Verified</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>E-Mail:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Mobile No.:</td>
+                <td><input type="tel" name="mobile"></td>
+            </tr>
+            <tr>
+                <td>Details of:</td>
+                <td>
+                    <label><input type="radio" name="details-of" value="father"> Father</label>
+                    <label><input type="radio" name="details-of" value="mother"> Mother</label>
+                    <label><input type="radio" name="details-of" value="guardian"> Guardian</label>
+                    <label><input type="radio" name="details-of" value="husband"> Husband</label>
+                    <label><input type="radio" name="details-of" value="wife"> Wife</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="button" class="cancel-btn" onclick="window.location.href='/'">Cancel</button>
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+
+</html>
